@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gof.Patterns.Test", "Gof.Patterns.Test\Gof.Patterns.Test.csproj", "{7116A345-E14D-4C96-9A68-14EDF0BB7353}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7116A345-E14D-4C96-9A68-14EDF0BB7353}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7116A345-E14D-4C96-9A68-14EDF0BB7353}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7116A345-E14D-4C96-9A68-14EDF0BB7353}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7116A345-E14D-4C96-9A68-14EDF0BB7353}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C4F23BE-C71E-442B-B0E8-E8AD48B099A0}
+	EndGlobalSection
+EndGlobal
