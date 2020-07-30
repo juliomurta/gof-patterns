@@ -5,6 +5,8 @@ using Gof.Patterns.Creation.Builder;
 using Gof.Patterns.Creation.FactoryMethod.Entities;
 using Gof.Patterns.Creation.FactoryMethod.Entities.Maison;
 using Gof.Patterns.Creation.FactoryMethod.Entities.Office;
+using Gof.Patterns.Creation.Prototype;
+using Gof.Patterns.Creation.Prototype.Entities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Gof.Patterns.Test
@@ -75,6 +77,39 @@ namespace Gof.Patterns.Test
 
             Assert.IsInstanceOfType(officeWall, typeof(OfficeWall));
             Assert.IsTrue(officeWall.GetType().BaseType == typeof(Wall));
+        }
+
+        [TestMethod]
+        public void Prototype_Pattern_Test()
+        {
+            var factoryOne = new PrototypeFactory(new Ype(), new Rose(), new Apple());
+            var factoryTwo = new PrototypeFactory(new Pine(), new Lothus(), new Papaya());
+
+            var ype = factoryOne.MakeTree();
+            var rose = factoryOne.MakeFlower();
+            var apple = factoryOne.MakeFruit();
+
+            var pine = factoryTwo.MakeTree();
+            var lothus = factoryTwo.MakeFlower();
+            var papaya = factoryTwo.MakeFruit();
+
+            Assert.AreEqual(ype.Warning, "Eu sou um ypê-roxo!");
+            Assert.IsInstanceOfType(ype, typeof(Ype));
+
+            Assert.AreEqual(rose.Warning, "Eu sou uma Rosa");
+            Assert.IsInstanceOfType(rose, typeof(Rose));
+
+            Assert.AreEqual(apple.Warning, "Eu sou uma Maçã!");
+            Assert.IsInstanceOfType(apple, typeof(Apple));
+
+            Assert.AreEqual(pine.Warning, "Eu sou um pinheiro!");
+            Assert.IsInstanceOfType(pine, typeof(Pine));
+
+            Assert.AreEqual(lothus.Warning, "Eu sou uma flor de lótus!");
+            Assert.IsInstanceOfType(lothus, typeof(Lothus));
+
+            Assert.AreEqual(papaya.Warning, "Eu sou um mamão!");
+            Assert.IsInstanceOfType(papaya, typeof(Papaya));
         }
     }
 }

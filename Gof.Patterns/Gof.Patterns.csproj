@@ -71,6 +71,16 @@
     <Compile Include="Creation\FactoryMethod\Entities\Office\OfficeFactory.cs" />
     <Compile Include="Creation\FactoryMethod\Entities\Office\OfficeWall.cs" />
     <Compile Include="Creation\FactoryMethod\Entities\Wall.cs" />
+    <Compile Include="Creation\Prototype\Entities\Abstract\IFlower.cs" />
+    <Compile Include="Creation\Prototype\Entities\Abstract\IFruit.cs" />
+    <Compile Include="Creation\Prototype\Entities\Abstract\ITree.cs" />
+    <Compile Include="Creation\Prototype\Entities\Apple.cs" />
+    <Compile Include="Creation\Prototype\Entities\Lothus.cs" />
+    <Compile Include="Creation\Prototype\Entities\Papaya.cs" />
+    <Compile Include="Creation\Prototype\Entities\Pine.cs" />
+    <Compile Include="Creation\Prototype\Entities\Rose.cs" />
+    <Compile Include="Creation\Prototype\Entities\Ype.cs" />
+    <Compile Include="Creation\Prototype\PrototypeFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
