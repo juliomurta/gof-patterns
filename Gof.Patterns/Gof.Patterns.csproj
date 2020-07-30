@@ -81,6 +81,7 @@
     <Compile Include="Creation\Prototype\Entities\Rose.cs" />
     <Compile Include="Creation\Prototype\Entities\Ype.cs" />
     <Compile Include="Creation\Prototype\PrototypeFactory.cs" />
+    <Compile Include="Creation\Singleton\MyInstance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

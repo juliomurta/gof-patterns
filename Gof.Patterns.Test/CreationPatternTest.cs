@@ -7,6 +7,7 @@ using Gof.Patterns.Creation.FactoryMethod.Entities.Maison;
 using Gof.Patterns.Creation.FactoryMethod.Entities.Office;
 using Gof.Patterns.Creation.Prototype;
 using Gof.Patterns.Creation.Prototype.Entities;
+using Gof.Patterns.Creation.Singleton;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Gof.Patterns.Test
@@ -110,6 +111,12 @@ namespace Gof.Patterns.Test
 
             Assert.AreEqual(papaya.Warning, "Eu sou um mamão!");
             Assert.IsInstanceOfType(papaya, typeof(Papaya));
+        }
+
+        [TestMethod]
+        public void Singleton_Pattern_Test()
+        {
+            Assert.IsNotNull(MyInstance.Instance());
         }
     }
 }
