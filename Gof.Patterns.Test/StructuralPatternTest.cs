@@ -1,6 +1,7 @@
 ﻿using Gof.Patterns.Structural.Adapter;
 using Gof.Patterns.Structural.Bridge;
 using Gof.Patterns.Structural.Composite;
+using Gof.Patterns.Structural.Decorator;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Gof.Patterns.Test
@@ -51,6 +52,18 @@ namespace Gof.Patterns.Test
             box4.Add(box3);
 
             Assert.AreEqual(60, box4.Sum());
+        }
+
+        [TestMethod]
+        public void Decorator_Pattern_Test()
+        {
+            var coffee = new Coffee();
+            var coffeeWithMilk = new CoffeeWithMilk(coffee);
+            var cappuccino = new Cappuccino(coffee);
+
+            Assert.AreEqual("Coffee", coffee.Description());
+            Assert.AreEqual("I'm Coffee with milk", coffeeWithMilk.Description());
+            Assert.AreEqual("I'm Coffee Cappuccino", cappuccino.Description());
         }
     }
 }

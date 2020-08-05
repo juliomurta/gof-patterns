@@ -94,6 +94,11 @@
     <Compile Include="Structural\Composite\Box.cs" />
     <Compile Include="Structural\Composite\Item.cs" />
     <Compile Include="Structural\Composite\Product.cs" />
+    <Compile Include="Structural\Decorator\Beverage.cs" />
+    <Compile Include="Structural\Decorator\Cappuccino.cs" />
+    <Compile Include="Structural\Decorator\Coffee.cs" />
+    <Compile Include="Structural\Decorator\CoffeeDecorator.cs" />
+    <Compile Include="Structural\Decorator\CoffeeWithMilk.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
