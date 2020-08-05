@@ -86,6 +86,14 @@
     <Compile Include="Structural\Adapter\Adaptee.cs" />
     <Compile Include="Structural\Adapter\Adapter.cs" />
     <Compile Include="Structural\Adapter\ITarget.cs" />
+    <Compile Include="Structural\Bridge\Abstraction.cs" />
+    <Compile Include="Structural\Bridge\ExtendedAbstraction.cs" />
+    <Compile Include="Structural\Bridge\IImplementation.cs" />
+    <Compile Include="Structural\Bridge\ImplementationA.cs" />
+    <Compile Include="Structural\Bridge\ImplementationB.cs" />
+    <Compile Include="Structural\Composite\Box.cs" />
+    <Compile Include="Structural\Composite\Item.cs" />
+    <Compile Include="Structural\Composite\Product.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
