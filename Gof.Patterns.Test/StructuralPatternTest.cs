@@ -2,6 +2,8 @@
 using Gof.Patterns.Structural.Bridge;
 using Gof.Patterns.Structural.Composite;
 using Gof.Patterns.Structural.Decorator;
+using Gof.Patterns.Structural.Facade;
+using Gof.Patterns.Structural.Proxy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Gof.Patterns.Test
@@ -64,6 +66,20 @@ namespace Gof.Patterns.Test
             Assert.AreEqual("Coffee", coffee.Description());
             Assert.AreEqual("I'm Coffee with milk", coffeeWithMilk.Description());
             Assert.AreEqual("I'm Coffee Cappuccino", cappuccino.Description());
+        }
+
+        [TestMethod]
+        public void Facade_Pattern_Test()
+        {
+            var facade = new MyFacade(new SubSystem1(), new SubSystem2());
+            Assert.AreEqual(70, facade.GimmeSeventy());
+        }
+
+        [TestMethod]
+        public void Proxy_Pattern_Test()
+        {
+            var proxy = new SubjectProxy(new RealSubject());
+            Assert.AreEqual("inside proxy everything is ok", proxy.Operation());
         }
     }
 }

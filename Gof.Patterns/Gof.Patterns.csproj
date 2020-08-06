@@ -99,6 +99,10 @@
     <Compile Include="Structural\Decorator\Coffee.cs" />
     <Compile Include="Structural\Decorator\CoffeeDecorator.cs" />
     <Compile Include="Structural\Decorator\CoffeeWithMilk.cs" />
+    <Compile Include="Structural\Facade\MyFacade.cs" />
+    <Compile Include="Structural\Proxy\ISubject.cs" />
+    <Compile Include="Structural\Proxy\RealSubject.cs" />
+    <Compile Include="Structural\Proxy\SubjectProxy.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
