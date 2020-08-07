@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Behavioural\ChainOfResponsibility\IHandler.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Door.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Maze.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Room.cs" />
