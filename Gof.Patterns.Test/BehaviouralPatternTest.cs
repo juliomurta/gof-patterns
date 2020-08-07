@@ -1,4 +1,5 @@
 ﻿using Gof.Patterns.Behavioural.ChainOfResponsibility;
+using Gof.Patterns.Behavioural.Memento;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
@@ -20,6 +21,23 @@ namespace Gof.Patterns.Test
             Assert.IsTrue((bool)first.Handler(NumberEnum.Two));
             Assert.IsTrue((bool)first.Handler(NumberEnum.Three));
             Assert.IsNull(first.Handler(NumberEnum.Four));
+        }
+
+        [TestMethod]
+        public void Memento_Pattern_Test()
+        {
+            var originator = new Originator("super-super-super-super");
+            var caretaker = new Caretaker(originator);
+
+            var obj1 = caretaker.Backup();
+            Assert.AreEqual("super-super-super-super", obj1.GetState());
+
+            originator.DoSomething();
+            var obj2 = caretaker.Backup();
+            Assert.AreNotEqual("super-super-super-super", obj2.GetState());
+
+            var obj3 = caretaker.Undo();
+            Assert.AreEqual("super-super-super-super", obj3.GetState());
         }
     }
 }

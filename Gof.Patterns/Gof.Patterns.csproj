@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behavioural\ChainOfResponsibility\IHandler.cs" />
+    <Compile Include="Behavioural\Memento\Originator.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Door.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Maze.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Room.cs" />
