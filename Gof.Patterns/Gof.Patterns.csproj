@@ -51,6 +51,10 @@
     <Compile Include="Behavioural\State\LampOn.cs" />
     <Compile Include="Behavioural\State\LampState.cs" />
     <Compile Include="Behavioural\State\MyLamp.cs" />
+    <Compile Include="Behavioural\Strategy\Context.cs" />
+    <Compile Include="Behavioural\Strategy\HigherThanThirty.cs" />
+    <Compile Include="Behavioural\Strategy\IStrategy.cs" />
+    <Compile Include="Behavioural\Strategy\LowerThanTen.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Door.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Maze.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Room.cs" />

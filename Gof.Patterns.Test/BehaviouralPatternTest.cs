@@ -2,6 +2,7 @@
 using Gof.Patterns.Behavioural.Memento;
 using Gof.Patterns.Behavioural.Observer;
 using Gof.Patterns.Behavioural.State;
+using Gof.Patterns.Behavioural.Strategy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
@@ -69,6 +70,18 @@ namespace Gof.Patterns.Test
 
             lamp.ChangeState();
             Assert.AreEqual(typeof(LampOn), lamp.State.GetType());
+        }
+
+        [TestMethod]
+        public void Strategy_Pattern_Test()
+        {
+            var context = new Context(new HigherThanThirty());
+            Assert.AreEqual(1000, context.CheckCondition(40));
+            Assert.AreEqual(0, context.CheckCondition(20));
+
+            context = new Context(new LowerThanTen());
+            Assert.AreEqual(1000, context.CheckCondition(5));
+            Assert.AreEqual(0, context.CheckCondition(15));
         }
     }
 }
