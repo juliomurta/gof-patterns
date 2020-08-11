@@ -43,6 +43,14 @@
   <ItemGroup>
     <Compile Include="Behavioural\ChainOfResponsibility\IHandler.cs" />
     <Compile Include="Behavioural\Memento\Originator.cs" />
+    <Compile Include="Behavioural\Observer\ConcreteObserver.cs" />
+    <Compile Include="Behavioural\Observer\Interface\IObserver.cs" />
+    <Compile Include="Behavioural\Observer\Interface\ISubject.cs" />
+    <Compile Include="Behavioural\Observer\Subject.cs" />
+    <Compile Include="Behavioural\State\LampOff.cs" />
+    <Compile Include="Behavioural\State\LampOn.cs" />
+    <Compile Include="Behavioural\State\LampState.cs" />
+    <Compile Include="Behavioural\State\MyLamp.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Door.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Maze.cs" />
     <Compile Include="Creation\AbstractFactory\Abstract\Room.cs" />

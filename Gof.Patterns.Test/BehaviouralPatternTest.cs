@@ -1,5 +1,7 @@
 ﻿using Gof.Patterns.Behavioural.ChainOfResponsibility;
 using Gof.Patterns.Behavioural.Memento;
+using Gof.Patterns.Behavioural.Observer;
+using Gof.Patterns.Behavioural.State;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 
@@ -38,6 +40,35 @@ namespace Gof.Patterns.Test
 
             var obj3 = caretaker.Undo();
             Assert.AreEqual("super-super-super-super", obj3.GetState());
+        }
+
+        [TestMethod]
+        public void Observer_Pattern_Test()
+        {
+            var subject = new Subject();
+            var observer = new ConcreteObserver();
+
+            subject.Attach(observer);
+
+            Assert.IsTrue(observer.IsActive);
+
+            subject.ChangeStates();
+
+            Assert.IsFalse(observer.IsActive);
+
+        }
+
+        [TestMethod]
+        public void State_Pattern_Test()
+        {
+            var lamp = new MyLamp(new LampOn());
+            Assert.AreEqual(typeof(LampOn), lamp.State.GetType());
+
+            lamp.ChangeState();
+            Assert.AreEqual(typeof(LampOff), lamp.State.GetType());            
+
+            lamp.ChangeState();
+            Assert.AreEqual(typeof(LampOn), lamp.State.GetType());
         }
     }
 }
